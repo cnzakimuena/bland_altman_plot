@@ -121,8 +121,8 @@ if __name__ == '__main__':
     generate_plot(m1_array,
                   m2_array,
                   [50, 250],
-                  independent_variable_label=r'Arm systolic pressure $\mathregular{[mmHg]}$',
-                  dependent_variable_label=r'Finger systolic pressure $\mathregular{[mmHg]}$',
+                  independent_variable_label=r'SBP$_{\rm arm}$ $\mathregular{[mmHg]}$',
+                  dependent_variable_label=r'SBP$_{\rm finger}$ $\mathregular{[mmHg]}$',
                   specified_colors='cornflowerblue')
 
     # save figure
