@@ -19,7 +19,7 @@ def generate_bland_altman(data1, data2, ax_var, color_input):
     Generates a Bland-Altman plot for two sets of data.
     """
     mean = np.mean([data1, data2], axis=0)
-    diff = data1 - data2  # difference between data1 and data2
+    diff = data2 - data1  # difference between data1 and data2
     md = np.mean(diff)  # mean of the difference
     sd = np.std(diff, axis=0)  # standard deviation of the difference
     ci_low = md - 1.96 * sd
@@ -104,7 +104,7 @@ def generate_plot(measure1,
 
         # add global title
         if super_title is not None:
-            fig.suptitle(super_title, fontsize="large", color="k")
+            fig.suptitle(super_title, fontsize="large", color="black")
 
 
 if __name__ == '__main__':
@@ -121,8 +121,10 @@ if __name__ == '__main__':
     generate_plot(m1_array,
                   m2_array,
                   [50, 250],
-                  independent_variable_label=r'SBP$_{\rm arm}$ $\mathregular{[mmHg]}$',
-                  dependent_variable_label=r'SBP$_{\rm finger}$ $\mathregular{[mmHg]}$',
+                  independent_variable_label= \
+                      r'Average SBP $\mathregular{[mmHg]}$',
+                  dependent_variable_label= \
+                      r'SBP$_{\rm finger}$ - SBP$_{\rm arm}$ $\mathregular{[mmHg]}$',
                   specified_colors='cornflowerblue')
 
     # save figure
