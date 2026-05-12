@@ -34,14 +34,14 @@ def generate_bland_altman(data1, data2, ax_var, color_input):
 def generate_plot(measure1,
                   measure2,
                   x_range_array,
-                  independent_variable_label=None,
-                  dependent_variable_label=None,
-                  specified_colors='mediumblue',
-                  super_title=None):
+                  **plot_kwargs):
     """
     Calls function to generate a Bland-Altman plot for two sets of measurements and provides 
     customized aesthetics.
     """
+
+    if 'specified_color' not in plot_kwargs:
+        plot_kwargs['specified_color'] = 'blue'
 
     sns.set(style="whitegrid", font_scale=1.6)
 
@@ -53,7 +53,7 @@ def generate_plot(measure1,
         diff, md, sd, ci_low, ci_high = generate_bland_altman(measure1,
                                                               measure2,
                                                               ax,
-                                                              specified_colors)
+                                                              plot_kwargs['specified_color'])
 
         ax.axhline(y=0, color='black', linestyle=':', linewidth=2)
 
@@ -76,10 +76,10 @@ def generate_plot(measure1,
         ax.set(ylim=(diff.min() - 0.5 * sd, diff.max() + 0.5 * sd))
 
         # set x and y labels
-        if independent_variable_label is not None:
-            ax.set_xlabel(independent_variable_label)
-        if dependent_variable_label is not None:
-            ax.set_ylabel(dependent_variable_label)
+        if 'independent_variable_label' in plot_kwargs:
+            ax.set_xlabel(plot_kwargs['independent_variable_label'])
+        if 'dependent_variable_label' in plot_kwargs:
+            ax.set_ylabel(plot_kwargs['dependent_variable_label'])
 
         # alter axis line size
         # change all spines
@@ -103,8 +103,8 @@ def generate_plot(measure1,
         plt.subplots_adjust(bottom=0.3, top=0.8, left=0.25, right=0.7)
 
         # add global title
-        if super_title is not None:
-            fig.suptitle(super_title, fontsize="large", color="black")
+        if 'super_title' in plot_kwargs:
+            fig.suptitle(plot_kwargs['super_title'], fontsize="large", color="black")
 
 
 if __name__ == '__main__':
@@ -125,7 +125,7 @@ if __name__ == '__main__':
                       r'Average SBP $\mathregular{[mmHg]}$',
                   dependent_variable_label= \
                       r'SBP$_{\rm finger}$ - SBP$_{\rm arm}$ $\mathregular{[mmHg]}$',
-                  specified_colors='cornflowerblue')
+                  specified_color='cornflowerblue')
 
     # save figure
     FILE_DESTINATION = r'.\figure'
