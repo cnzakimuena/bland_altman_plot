@@ -113,13 +113,9 @@ if __name__ == '__main__':
     EXAMPLE_DATA_PATH = r'.\systolic blood pressure.csv'
     example_data_df = pd.read_csv(EXAMPLE_DATA_PATH)
 
-    # --- variables setup ---
-    m1_array = example_data_df.iloc[:, 0].to_numpy()
-    m2_array = example_data_df.iloc[:, 1].to_numpy()
-
     # --- plot data ---
-    generate_plot(m1_array,
-                  m2_array,
+    generate_plot(example_data_df.iloc[:, 0].to_numpy(),
+                  example_data_df.iloc[:, 1].to_numpy(),
                   [50, 250],
                   independent_variable_label= \
                       r'Average SBP $\mathregular{[mmHg]}$',
