@@ -3,7 +3,7 @@ Script to generate a Bland-Altman plot which is a method of data plotting used i
 
 The dataset used for demonstration is featured in the following publication:
 
-[Bland, J. M., & Altman, D. G. (1995). Comparing methods of measurement: why plotting difference against standard method is misleading. The lancet, 346(8982), 1085-1087.](https://doi.org/10.1016/S0140-6736(95)91748-9)
+[Bland, J. M., & Altman, D. G. (1995). Comparing methods of measurement: why plotting difference against standard method is misleading. The lancet, 346(8982), 1085-1087.](https://www.thelancet.com/journals/lancet/article/PIIS0140673695917489/abstract)
 
 installation:
 
