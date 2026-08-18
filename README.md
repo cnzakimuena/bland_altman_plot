@@ -14,7 +14,7 @@ pip install -r requirements.txt
 usage:
 
 ```bash
-python panel_plot.py
+python bland_altman_plot.py
 ```
 
 Cite As
