@@ -1,5 +1,5 @@
 # Bland-Altman Plot
-Script to generate a Bland-Altman plot which is a method of data plotting used in analyzing the agreement between two different measurements. The plot uses systolic blood pressure measurements from the arm and finger ([Bland & Altman, 1995](https://www.thelancet.com/journals/lancet/article/PIIS0140673695917489/abstract)) for demonstration.
+Script to generate a Bland-Altman plot ([Bland & Altman, 1986](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(86)90837-8/fulltext)) which is a method of data plotting used in analyzing the agreement between two different measurements. The plot uses systolic blood pressure measurements from the arm and finger ([Bland & Altman, 1995](https://www.thelancet.com/journals/lancet/article/PIIS0140673695917489/abstract)) for demonstration.
 
 installation:
 
@@ -21,4 +21,5 @@ Cite As
 
 ### References
 
-[Bland, J. M., & Altman, D. G. (1995). Comparing methods of measurement: why plotting difference against standard method is misleading. The lancet, 346(8982), 1085-1087.](https://www.thelancet.com/journals/lancet/article/PIIS0140673695917489/abstract)
+1. [Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The lancet, 327(8476), 307-310.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(86)90837-8/fulltext)
+1. [Bland, J. M., & Altman, D. G. (1995). Comparing methods of measurement: why plotting difference against standard method is misleading. The lancet, 346(8982), 1085-1087.](https://www.thelancet.com/journals/lancet/article/PIIS0140673695917489/abstract)
