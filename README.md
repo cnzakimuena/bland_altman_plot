@@ -1,13 +1,20 @@
 # Bland-Altman Plot
 Script to generate a Bland-Altman plot ([Bland & Altman, 1986](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(86)90837-8/fulltext)) which is a method of data plotting used in analyzing the agreement between two different measurements. The plot uses systolic blood pressure measurements from the arm and finger ([Bland & Altman, 1995](https://www.thelancet.com/journals/lancet/article/PIIS0140673695917489/abstract)) for demonstration.
 
-installation:
+Environment setup:
+
+```bash
+conda create -n myenv python=3.11
+conda activate myenv
+```
+
+Dependencies installation:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-usage:
+Usage:
 
 ```bash
 python bland_altman_plot.py
