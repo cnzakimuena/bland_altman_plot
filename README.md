@@ -17,7 +17,7 @@ pip install -r requirements.txt
 Usage:
 
 ```bash
-python bland_altman_plot.py
+python plot_bland_altman.py
 ```
 
 <p align="center">
